@@ -36,6 +36,8 @@ img {
 
 .main-page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .navbar-menu {
@@ -75,6 +77,7 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-item:hover,
@@ -95,6 +98,17 @@ a {
   display: inline-block;
   margin-bottom: 16px;
   margin-top: 16px;
+}
+
+.feature-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .features-list {
@@ -118,6 +132,28 @@ a {
   color: #2e2f42;
   padding: 24px 0 24px;
   width: calc((100% - 80px) / 3);
+}
+
+.nav-item-studio {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #404bbf;
+  padding: 24px 0 24px;
+  width: calc((100% - 80px) / 3);
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-item-studio::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 
 .contacts-list {
@@ -148,6 +184,7 @@ a {
   background-size: cover;
   background-color: #2e2f42;
   padding: 188px 0;
+  max-width: 1440px;
 }
 
 .section {
@@ -199,6 +236,7 @@ h2 {
   letter-spacing: 0.02em;
   color: #434455;
   text-align: center;
+  margin: 0;
 }
 
 .team-list-item-title {
@@ -234,9 +272,43 @@ h2 {
   gap: 24px;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.social-link-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-link-logo {
+  fill: #f4f4fd;
+}
+
+.social-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #404bbf;
+}
+
 .team-list-item {
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-list-item-container {
@@ -271,6 +343,32 @@ h2 {
 
 .portfolio-list-item {
   width: calc((100% - 48px) / 3);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-list-item:hover .portfolio-hidden-text {
+  transform: translateY(0);
+}
+
+.portfolio-hidden-text {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-img-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-list-item-container {
@@ -293,6 +391,7 @@ h2 {
   height: 56px;
   border-radius: 4px;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .primary-button:hover,
@@ -314,4 +413,44 @@ h2 {
   color: #f4f4fd;
   letter-spacing: 0.02em;
   width: 264px;
+}
+
+.footer-inner-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-icon-container {
+  margin-right: 120px;
+}
+
+.social-media-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.footer-social-media-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social-media-list-item-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-media-list-item-link:hover,
+.footer-social-media-list-item-link:focus {
+  background-color: #31d0aa;
 }
